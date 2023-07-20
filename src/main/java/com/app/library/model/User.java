@@ -18,26 +18,27 @@ public class User {
     @Column(name = "us_name")
     private String username;
 
-    @Column(name="us_password")
+    @Column(name = "us_password")
     private String password;
-    @Column(name="us_fullname")
+    @Column(name = "us_fullname")
     private String fullname;
-    @Column(name="us_address")
+    @Column(name = "us_address")
     private String address;
-    @Column(name="us_create_date")
+    @Column(name = "us_create_date")
     private Date createDate;
-    @Column(name="us_update_password")
+    @Column(name = "us_update_password")
     private int updatePassword;
-    @Column(name="us_mobile")
+    @Column(name = "us_mobile")
     private String mobile;
-    @Column(name="us_status")
+    @Column(name = "us_status")
     private int status;
-    @Column(name="us_group")
+    @Column(name = "us_group")
     private int group;
-    @Column(name="us_email")
+    @Column(name = "us_email")
     private String email;
 
-    public User( String username, String password, String fullname, String address, Date createDate, int updatePassword, String mobile, int status, int group, String email) {
+    public User(String username, String password, String fullname, String address, Date createDate, int updatePassword,
+            String mobile, int status, int group, String email) {
         this.username = username;
         this.password = password;
         this.fullname = fullname;
@@ -53,7 +54,6 @@ public class User {
     public User() {
 
     }
-
 
     public String getUsername() {
         return username;
