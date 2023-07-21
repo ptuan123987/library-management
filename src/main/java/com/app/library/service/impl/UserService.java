@@ -31,7 +31,19 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public void updateUser(int Id) {
+    public User updateUser(int Id,User userUpdate) {
+        User user = userRepository.findById(Id).orElse(new User());
+        user.setFullname(userUpdate.getFullname());
+        user.setAddress(userUpdate.getAddress());
+        user.setCreateDate(userUpdate.getCreateDate());
+        user.setEmail(userUpdate.getEmail());
+        user.setGroup(userUpdate.getGroup());
+        user.setStatus(userUpdate.getStatus());
+        user.setMobile(userUpdate.getMobile());
+        user.setPassword(userUpdate.getPassword());
+        user.setUsername(userUpdate.getUsername());
+        user.setUpdatePassword(userUpdate.getUpdatePassword());
+        return userRepository.save(user);
 
     }
 

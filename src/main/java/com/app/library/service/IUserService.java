@@ -9,7 +9,7 @@ import java.util.List;
 public interface IUserService {
     public void signUp(User user);
 
-    public void updateUser(int Id);
+    public User updateUser(int Id,User userUpdate);
     public void deleteUser(int Id);
 
     public ResponseEntity<User> getUser(int Id);
