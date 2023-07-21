@@ -12,7 +12,7 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "au_id", nullable = false)
-    private Long au_id;
+    private int au_id;
 
 
 
@@ -26,3 +26,4 @@ public class Author {
     private String au_image;
 
 }
+

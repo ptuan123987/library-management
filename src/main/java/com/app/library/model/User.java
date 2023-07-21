@@ -123,8 +123,8 @@ public class User {
         this.mobile = mobile;
     }
 
-    public int getStatus() {
-        return status.ordinal();
+    public RoleName getStatus() {
+        return status;
     }
 
     public void setStatus(RoleName status) {

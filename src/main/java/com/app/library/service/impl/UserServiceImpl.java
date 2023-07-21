@@ -31,7 +31,7 @@ public class UserServiceImpl implements com.app.library.service.UserServiceImpl 
     @Override
     public User updateUser(int Id,User userUpdate) {
         User user = userRepository.findById(Id).orElse(new User());
-        user.setFullname(userUpdate.getFullname());
+        user.setFullName(userUpdate.getFullName());
         user.setAddress(userUpdate.getAddress());
         user.setCreateDate(userUpdate.getCreateDate());
         user.setEmail(userUpdate.getEmail());
