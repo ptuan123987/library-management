@@ -19,10 +19,10 @@ public class Publisher {
 	@Column(name = "pu_introduce", nullable = false)
 	private String pu_introduce;
 
-	@Column(name = "pu_website_link")
+	@Column(name = "pu_website")
 	private String pu_website_link;
 
-	@Column(name = "pu_image_link")
+	@Column(name = "pu_image")
 	private String pu_image_link;
 
 

@@ -22,4 +22,11 @@ public class UserController {
     public ResponseEntity<User> signUp(@RequestBody User user){
         return userService.addUser(user);
     }
+
+    @RequestMapping(value = "update/{id}",method = RequestMethod.POST)
+    public ResponseEntity<User> signUp(@PathVariable int id,@RequestBody User user){
+        User newUser = userService.updateUser(id, user);
+        ResponseEntity<User> ok = new ResponseEntity<>(newUser, HttpStatus.OK);
+        return ok;
+    }
 }
