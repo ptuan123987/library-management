@@ -3,14 +3,12 @@ package com.app.library.controller;
 import com.app.library.model.ResponseObject;
 import com.app.library.model.User;
 import com.app.library.repository.UserRepository;
+import com.app.library.service.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -19,18 +17,15 @@ import java.util.Optional;
 public class UserController {
 
     @Autowired
-    UserRepository userRepository;
+    UserService userService;
     @RequestMapping("{id}")
-    public ResponseEntity<ResponseObject> getUserById(@PathVariable("id") int id){
-        Optional<User> user = userRepository.findById(id);
+    public ResponseEntity<User> getUserById(@PathVariable("id") int id){
 
-        return user.isPresent() ?
-                ResponseEntity.status(HttpStatus.OK).body(
-                        new ResponseObject("ok", "Query user successfully", user)
-                        //you can replace "ok" with your defined "error code"
-                ):
-                ResponseEntity.status(HttpStatus.NOT_FOUND).body(
-                        new ResponseObject("failed", "Cannot find user with id = "+id, "")
-                );
+        return userService.getUser(id);
+    }
+
+    @RequestMapping(value = "signup",method = RequestMethod.POST)
+    public ResponseEntity<User> signUp(@RequestBody User user){
+        return userService.addUser(user);
     }
 }
