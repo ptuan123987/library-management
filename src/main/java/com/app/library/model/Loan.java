@@ -17,11 +17,9 @@ public class Loan {
     @Column(name = "lo_id")
     private int lo_id;
 
-    @Id
     @Column(name = "lo_no_of_date")
     private int lo_no_of_date;
 
-    @Id
     @Column(name = "lo_create_date")
     private Date lo_create_date;
 
@@ -79,5 +77,16 @@ public class Loan {
 
     public void setBook(Book book) {
         this.book = book;
+    }
+
+    @Override
+    public String toString() {
+        return "Loan{" +
+                "lo_id=" + lo_id +
+                ", lo_no_of_date='" + lo_no_of_date + '\'' +
+                ", lo_create_date='" + lo_create_date + '\'' +
+                ", user='" + user + '\'' +
+                ", book='" + book + '\'' +
+                '}';
     }
 }
