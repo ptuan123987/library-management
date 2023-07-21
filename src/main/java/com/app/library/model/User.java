@@ -1,10 +1,7 @@
 package com.app.library.model;
 
 import com.app.library.model.role.RoleName;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 
 import java.util.Date;
@@ -34,7 +31,10 @@ public class User {
     private int updatePassword;
     @Column(name = "us_mobile", nullable = false, length = 15)
     private String mobile;
+
+    @Enumerated(EnumType.STRING)
     @Column(name = "us_status", nullable = false)
+
     private RoleName status;
     @Column(name="us_group")
     private int group;

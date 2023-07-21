@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService implements com.app.library.service.UserService {
+public class UserServiceImpl implements com.app.library.service.UserServiceImpl {
     @Autowired
     private UserRepository userRepository;
     @Override

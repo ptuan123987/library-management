@@ -1,5 +1,6 @@
 package com.app.library.service.impl;
 import java.util.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -8,7 +9,7 @@ import com.app.library.model.*;
 import com.app.library.repository.LoanRepository;
 
 @Service
-public class LoanService implements com.app.library.service.LoanService {
+public class LoanServiceImpl implements com.app.library.service.LoanServiceImpl {
     @Autowired
     private LoanRepository loanRepository;
 

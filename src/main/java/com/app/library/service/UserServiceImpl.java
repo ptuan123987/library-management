@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public interface UserService {
+public interface UserServiceImpl {
     public void signUp(User user);
 
     public void updateUser(int Id);

@@ -1,23 +1,17 @@
 package com.app.library.controller;
 
-import com.app.library.model.ResponseObject;
 import com.app.library.model.User;
-import com.app.library.repository.UserRepository;
-import com.app.library.service.impl.UserService;
+import com.app.library.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping("user")
 public class UserController {
 
     @Autowired
-    UserService userService;
+    UserServiceImpl userService;
     @RequestMapping("{id}")
     public ResponseEntity<User> getUserById(@PathVariable("id") int id){
 

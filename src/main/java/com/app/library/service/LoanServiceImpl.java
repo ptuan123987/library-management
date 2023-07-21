@@ -6,6 +6,6 @@ import org.springframework.http.ResponseEntity;
 
 import com.app.library.model.User;
 
-public interface LoanService {
+public interface LoanServiceImpl {
     public ResponseEntity<List<User>> listUserBorrowing(int Id);
 }

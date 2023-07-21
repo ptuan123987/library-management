@@ -18,7 +18,7 @@ public class Loan {
     @Column(name = "lo_create_date", nullable = false)
     private Date lo_create_date;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "us_id")
     private User user;
 

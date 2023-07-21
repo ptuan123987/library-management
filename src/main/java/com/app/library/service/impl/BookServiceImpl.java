@@ -7,7 +7,7 @@ import com.app.library.model.Book;
 import com.app.library.repository.BookRepository;
 
 @Service
-public class BookService implements com.app.library.service.BookService {
+public class BookServiceImpl implements com.app.library.service.BookServiceImpl {
     @Autowired
     private BookRepository bookRepository;
 

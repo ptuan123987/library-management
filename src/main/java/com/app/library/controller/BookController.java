@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.library.model.Book;
-import com.app.library.service.impl.BookService;
+import com.app.library.service.impl.BookServiceImpl;
 
 @RestController
 @RequestMapping("book")
 public class BookController {
 
     @Autowired
-    BookService bookService;
+    BookServiceImpl bookService;
     @RequestMapping("{id}")
     public ResponseEntity<Book> getBookById(@PathVariable("id") int id){
 
