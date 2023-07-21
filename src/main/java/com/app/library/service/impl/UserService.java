@@ -1,9 +1,7 @@
 package com.app.library.service.impl;
 
-import com.app.library.model.ResponseObject;
 import com.app.library.model.User;
 import com.app.library.repository.UserRepository;
-import com.app.library.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService implements IUserService {
+public class UserService implements com.app.library.service.UserService {
     @Autowired
     private UserRepository userRepository;
     @Override

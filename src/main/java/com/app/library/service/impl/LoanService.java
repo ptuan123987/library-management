@@ -6,10 +6,9 @@ import org.springframework.stereotype.Service;
 
 import com.app.library.model.*;
 import com.app.library.repository.LoanRepository;
-import com.app.library.service.ILoanService;
 
 @Service
-public class LoanService implements ILoanService {
+public class LoanService implements com.app.library.service.LoanService {
     @Autowired
     private LoanRepository loanRepository;
 

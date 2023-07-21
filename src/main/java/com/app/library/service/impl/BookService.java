@@ -5,10 +5,9 @@ import org.springframework.stereotype.Service;
 
 import com.app.library.model.Book;
 import com.app.library.repository.BookRepository;
-import com.app.library.service.IBookService;
 
 @Service
-public class BookService implements IBookService{
+public class BookService implements com.app.library.service.BookService {
     @Autowired
     private BookRepository bookRepository;
 
