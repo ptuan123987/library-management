@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name = "loan")
+@Table(name = "loans")
 public class Loan {
 
     @Id

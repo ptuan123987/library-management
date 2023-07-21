@@ -3,7 +3,7 @@ package com.app.library.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "publisher")
+@Table(name = "publishers")
 public class Publisher {
 
 	@Id
@@ -16,10 +16,10 @@ public class Publisher {
 	@Column(name = "pu_introduce")
 	private String pu_introduce;
 
-	@Column(name = "pu_website_link")
+	@Column(name = "pu_website")
 	private String pu_website_link;
 
-	@Column(name = "pu_image_link")
+	@Column(name = "pu_image")
 	private String pu_image_link;
 
 	public Publisher() {

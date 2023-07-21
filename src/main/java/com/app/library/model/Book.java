@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name = "book")
+@Table(name = "books")
 public class Book {
     @Id
     @Column(name = "bo_id")
@@ -18,7 +18,7 @@ public class Book {
     @Column(name = "bo_title")
     private String bo_title;
 
-    @Column(name = "bo_publishedYear")
+    @Column(name = "bo_publish_year")
     private int bo_publishedYear;
 
     @Column(name = "bo_quantity")
@@ -27,10 +27,10 @@ public class Book {
     @Column(name = "bo_description")
     private String bo_description;
 
-    @Column(name = "bo_image_link")
+    @Column(name = "bo_image")
     private String bo_image_link;
 
-    @Column(name = "bo_created_date")
+    @Column(name = "bo_create_date")
     private Date bo_created_date;
 
     @ManyToOne
